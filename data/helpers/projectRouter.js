@@ -1,9 +1,16 @@
 const express = require("express");
-const projectDb = require("../helpers/projectModel");
+const projectDb = require("./projectModel");
 const server = express();
 
 server.get("/", (req, res) => {
   projectDb.get().then(projects => res.status(200).json(projects));
+});
+
+server.get("/:id/actions", (req, res) => {
+  const { id } = req.params;
+  projectDb
+    .getProjectActions(id)
+    .then(actions => res.status(200).json(actions));
 });
 
 server.post("/", (req, res) => {
