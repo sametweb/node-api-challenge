@@ -66,11 +66,11 @@ const Projects = (props) => {
 
   return projects.map((project) => {
     return (
-      <Link to={{ pathname: `/${project.id}`, state: project }}>
-        <div
-          key={project.id}
-          className={`project${project.completed ? " completed" : ""} `}
-        >
+      <Link
+        key={project.id}
+        to={{ pathname: `/${project.id}`, state: project }}
+      >
+        <div className={`project${project.completed ? " completed" : ""} `}>
           <h3>{project.name}</h3>
           <p>{project.description}</p>
         </div>
