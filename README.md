@@ -40,13 +40,25 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+routers, middlewares
+
 - [ ] Describe Middleware?
+
+  - functions that perform tasks, such as auth, logging, error handling, etc.
+  - may or may not affect what the endpoint returns back
 
 - [ ] Describe a Resource?
 
-- [ ] What can the API return to help clients know if a request was successful?
+  - data/files we serve to requests from endpoints, each has a unique uri
 
-- [ ] How can we partition our application into sub-applications?
+* [ ] What can the API return to help clients know if a request was successful?
+
+  - status code and (an optional) message
+  - `2xx` status codes represent that the request is handled successfully
+
+* [ ] How can we partition our application into sub-applications?
+
+  - routers
 
 ## Minimum Viable Product
 
